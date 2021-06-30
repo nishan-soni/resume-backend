@@ -41,7 +41,7 @@ app.post('/create/:template', (req, res) => {
             edu : education,
             exp : experience,
         },
-        path: `resume-temp.pdf`,
+        path: __dirname + 'resume-temp.pdf',
         type: "",
     };
 
