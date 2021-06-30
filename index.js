@@ -27,7 +27,7 @@ app.post('/create/:template', (req, res) => {
     let {template} = req.params;
     let {info, experience, education} = req.body;
 
-    let html = fs.readFileSync(`server/${template}/${template}.html`, "utf8");
+    let html = fs.readFileSync(`${template}/${template}.html`, "utf8");
 
     let options = {
         format: "Letter",
@@ -41,7 +41,7 @@ app.post('/create/:template', (req, res) => {
             edu : education,
             exp : experience,
         },
-        path: `server/resume.pdf`,
+        path: `resume-temp.pdf`,
         type: "",
     };
 
@@ -53,5 +53,5 @@ app.post('/create/:template', (req, res) => {
 
 //download the resume
 app.get('/download-resume', (req, res) => {
-    res.download(path.join(__dirname,'/resume-temp.pdf'), 'resume_output.pdf')
+    res.download(path.join(__dirname,'/resume-temp.pdf'), 'resume.pdf')
 })
