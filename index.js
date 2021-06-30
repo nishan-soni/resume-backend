@@ -13,13 +13,13 @@ app.use(express.urlencoded({ extended: true }))
 
 const port = process.env.PORT || 3000;
 
-/*app.listen(port, () => {
+app.listen(port, () => {
     console.log('listening on 3000')
-}) */
+})
 
-app.get('*', (req, res) => {
+/*app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, "../client/build/"));
-  });
+  });*/
 
 //creates the resume
 app.post('/create/:template', (req, res) => {
