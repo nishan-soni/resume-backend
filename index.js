@@ -9,13 +9,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 
 //loads react pages
-app.use(express.static((path.join(__dirname, "../client/build/"))))
+//app.use(express.static((path.join(__dirname, "../client/build/"))))
 
 const port = process.env.PORT || 3000;
 
-app.listen(port, () => {
+/*app.listen(port, () => {
     console.log('listening on 3000')
-})
+}) */
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, "../client/build/"));
