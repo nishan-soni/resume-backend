@@ -46,7 +46,7 @@ app.post('/create/:template', (req, res) => {
     };
 
     pdf.create(document, options)
-    res.send('Document Created');
+    res.send(__dirname);
 
 
 })
