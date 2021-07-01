@@ -8,9 +8,6 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 
-//loads react pages
-app.use(express.static((path.join(__dirname, "template1/template1.html"))))
-
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
