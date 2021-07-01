@@ -59,3 +59,7 @@ app.get('/download-resume', (req, res) => {
 app.get('/get-template', (req,res) => {
     res.download(__dirname+ "/template1/template1.html")
 })
+
+app.get('/send-file', (req,res) => {
+    res.sendFile(path.join(__dirname,'/resume-temp.pdf'), 'resume.pdf')
+})
