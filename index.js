@@ -55,3 +55,7 @@ app.post('/create/:template', (req, res) => {
 app.get('/download-resume', (req, res) => {
     res.download(path.join(__dirname,'/resume-temp.pdf'), 'resume.pdf')
 })
+
+app.get('/get-template', (req,res) => {
+    res.download(__dirname+ "/template1/template1.html")
+})
