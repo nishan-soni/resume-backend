@@ -10,9 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "pdf-creator-node": "^2.2.2",
-    "html-pdf":"^3.0.1",
-    "handlebars":"^4.7.7"
+    "handlebars": "^4.7.7",
+    "html-pdf": "^3.0.1"
   },
   "engines": {
     "node": "v14.16.0"
