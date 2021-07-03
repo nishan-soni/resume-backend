@@ -7,7 +7,7 @@
 <style type="text/css">
 
     html, body { 
-        zoom: /*1.25;*/0.9;
+        zoom: 1.25;/*0.9;*/
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
     
@@ -81,19 +81,14 @@
                         <div class = "projects" style="position: relative; top: 10px">
                         <div class="cls_007" style="position: relative;"><span class="cls_007">{{projects.title}}</span></div>
                         {{#each projects.proj_array}}
-                        <div>
-                            <div style="position: relative; top: 8px;">  
-                                <div style="position:relative;" class="cls_008"><span class="cls_008">{{this.project_name}}</span></div>
-                                <div style="position:relative;" class="cls_011"><span class="cls_011">{{this.date}}</span></div>
+                            <div style="position: relative;">  
+                                <div style="position:relative; top: 5px; " class="cls_008"><span class="cls_008">{{this.project_name}}</span></div>
+                                <div style="position:relative; top: 2px;" class="cls_011"><span class="cls_011">{{this.date}}</span></div>
                                     {{#each this.notes}}
                                     <div style="position:relative;left: 15px;" class="cls_012"><span class="cls_012">• </span><span class="cls_002">  {{this}}</span></div>
                                     {{/each}}
                             </div>
-                        </div>
-                        
                         {{/each}}
-                            
-
                         </div>
                     </div>
                 </div>
