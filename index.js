@@ -15,7 +15,7 @@ app.listen(port, () => {
 })
 
 //creates the resume
-app.get('/create/:template', (req, res) => {
+app.post('/create/:template', (req, res) => {
 
     let {template} = req.params;
     let {info, experience, education} = req.body;
