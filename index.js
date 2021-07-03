@@ -18,7 +18,8 @@ app.listen(port, () => {
 app.post('/create/:template', (req, res) => {
 
     let {template} = req.params;
-    let {info, experience, education} = req.body;
+    let {info, education, skills, experience, projects} = req.body;
+    
 
     let template_html = fs.readFileSync(`${template}/${template}.html`, "utf8");
 
@@ -32,7 +33,11 @@ app.post('/create/:template', (req, res) => {
         info: info,
         edu : education,
         exp : experience,
+        skills : skills,
+        projects : projects
     }
+
+    
 
     let html_compile = handlebars.compile(template_html)(data)
     pdf.create(html_compile, options).toStream(function(err, stream){
