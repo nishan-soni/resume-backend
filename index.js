@@ -1,13 +1,12 @@
-const pdf = require("pdf-creator-node");
-
+const pdf = require("html-pdf")
 const fs = require("fs");
 const express = require('express');
 const path = require('path');
+const handlebars = require('handlebars')
 const app = express();
 
-//middleware used to read post requests
+//middleware used to read requests
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }))
 
 const port = process.env.PORT || 3000;
 
@@ -15,37 +14,31 @@ app.listen(port, () => {
     console.log('listening on 3000')
 })
 
-/*app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, "../client/build/"));
-  });*/
-
 //creates the resume
-app.post('/create/:template', (req, res) => {
+app.get('/create/:template', (req, res) => {
 
     let {template} = req.params;
     let {info, experience, education} = req.body;
 
-    let html = fs.readFileSync(`${template}/${template}.html`, "utf8");
+    let template_html = fs.readFileSync(`${template}/${template}.html`, "utf8");
 
     let options = {
         format: "Letter",
         orientation: "portrait",
         
     };
-    let document = {
-        html: html,
-        data: {
-            info: info,
-            edu : education,
-            exp : experience,
-        },
-        path: __dirname + '/resume-temp.pdf',
-        type: "",
-    };
 
-    pdf.create(document, options)
-    res.send(__dirname);
+    let data = {
+        info: info,
+        edu : education,
+        exp : experience,
+    }
 
+    let html_compile = handlebars.compile(template_html)(data)
+    pdf.create(html_compile, options).toStream(function(err, stream){
+        stream.pipe(fs.createWriteStream(__dirname + '/resume-temp.pdf'));
+      });
+    res.send('created')
 
 })
 
