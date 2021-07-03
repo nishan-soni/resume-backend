@@ -36,7 +36,7 @@ app.get('/create/:template', (req, res) => {
 
     let html_compile = handlebars.compile(template_html)(data)
     pdf.create(html_compile, options).toStream(function(err, stream){
-        stream.pipe(fs.createWriteStream(__dirname + 'resume-temp.pdf'));
+        stream.pipe(fs.createWriteStream(__dirname + '/resume-temp.pdf'));
       });
     res.send('created')
 
