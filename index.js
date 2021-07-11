@@ -3,10 +3,12 @@ const fs = require("fs");
 const express = require('express');
 const path = require('path');
 const handlebars = require('handlebars')
+const cors = require('cors')
 const app = express();
 
 //middleware used to read requests
 app.use(express.json());
+app.use(cors())
 
 const port = process.env.PORT || 3000;
 
@@ -36,8 +38,6 @@ app.post('/create/:template', (req, res) => {
         skills : skills,
         projects : projects
     }
-
-    
 
     let html_compile = handlebars.compile(template_html)(data)
     pdf.create(html_compile, options).toStream(function(err, stream){
