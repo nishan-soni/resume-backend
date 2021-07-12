@@ -44,11 +44,5 @@ app.post('/create/:template', (req, res) => {
         res.attachment('resumenishan.pdf');
         stream.pipe(res)
       });
-    //res.send('created')
 
-})
-
-//download the resume
-app.get('/download-resume', (req, res) => {
-    res.download(path.join(__dirname,'/resume-temp.pdf'), 'resume.pdf')
 })
