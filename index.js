@@ -41,7 +41,7 @@ app.post('/create/:template', (req, res) => {
 
     let html_compile = handlebars.compile(template_html)(data)
     pdf.create(html_compile, options).toStream(function(err, stream){
-        res.attachment('resumenishan.pdf');
+        res.attachment('resume_output.pdf');
         stream.pipe(res)
       });
 
