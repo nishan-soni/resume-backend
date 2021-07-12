@@ -10,10 +10,10 @@ const app = express();
 app.use(express.json());
 app.use(cors())
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 
 app.listen(port, () => {
-    console.log('listening on 3000')
+    console.log('listening on 4000')
 })
 
 //creates the resume
@@ -41,9 +41,10 @@ app.post('/create/:template', (req, res) => {
 
     let html_compile = handlebars.compile(template_html)(data)
     pdf.create(html_compile, options).toStream(function(err, stream){
-        stream.pipe(fs.createWriteStream(__dirname + '/resume-temp.pdf'));
+        //stream.pipe(fs.createWriteStream(__dirname + '/resume-temp.pdf'));
+        res.send(stream)
       });
-    res.send('created')
+    //res.send('created')
 
 })
 
