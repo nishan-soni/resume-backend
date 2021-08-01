@@ -33,9 +33,10 @@ app.post('/create/:template', (req, res) => {
 
     let data = {
         info: info,
+        exp : experience.array,
+        exp_title : experience.title,
         edu : education.array,
         edu_title: education.title,
-        exp : experience,
         skills : skills,
         projects : projects
     }
