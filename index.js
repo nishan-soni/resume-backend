@@ -1,7 +1,6 @@
 const pdf = require("html-pdf")
 const fs = require("fs");
 const express = require('express');
-const path = require('path');
 const handlebars = require('handlebars')
 const cors = require('cors')
 const app = express();
@@ -9,6 +8,7 @@ const app = express();
 //middleware used to read requests
 app.use(express.json());
 app.use(cors())
+app.use(express.static('public')) //serve public files such as css for resume
 
 const port = process.env.PORT || 4000;
 
