@@ -73,7 +73,7 @@
             <div class = "education" style = "position: relative; padding-top: 5px;">
                 <div style="position:relative;" class="cls_007"><span class="cls_007">{{this.edu_title}}</span></div>
                 {{#each edu}}
-                <div style="position:relative; ">
+                <div style="position:relative; padding-top: 2px; ">
                     <div style="position:relative;" class="cls_008"><span class="cls_008">{{this.degree}}</span><span class="cls_010"> | {{this.university}}</span></div>
                     <div style="position:relative;" class="cls_011"><span class="cls_011">{{this.start}} - {{this.end}}</span></div>
                         {{#each this.notes}}
@@ -82,7 +82,7 @@
                     {{/each}}
                     <div class = "skills" style="position: relative; padding-top: 1px">
                         <div class="cls_007" style="position: relative;"><span class="cls_007">{{skills.title}}</span></div>
-                        <div style="position: relative;;"><span class = "cls_012">{{skills.skills}}</span></div>
+                        <div style="position: relative;"><span class = "cls_012">{{skills.skills}}</span></div>
                         <div class = "projects" style="position: relative;">
                         <div class="cls_007" style="position: relative; padding-top: 1px"><span class="cls_007">{{projects.title}}</span></div>
                         {{#each projects.proj_array}}
@@ -90,7 +90,7 @@
                                 <div style="position:relative; " class="cls_008"><span class="cls_008">{{this.project_name}}</span></div>
                                 <div style="position:relative;" class="cls_011"><span class="cls_011">{{this.start}} - {{this.end}}</span></div>
                                     {{#each this.notes}}
-                                    <div style="position:relative;left: 15px; top: 6px;" class="cls_012"><span class="cls_012">• </span><span class="cls_002">  {{this}}</span></div>
+                                    <div style="position:relative;left: 15px;" class="cls_012"><span class="cls_012">• </span><span class="cls_002">  {{this}}</span></div>
                                     {{/each}}
                             </div>
                         {{/each}}
