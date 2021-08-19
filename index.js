@@ -8,7 +8,7 @@ const app = express();
 //middleware used to read requests
 app.use(express.json());
 app.use(cors())
-app.use(express.static('public')) //serve public files such as css for resume
+app.use(express.static('public')) //serve public files such as css for the resume
 
 const port = process.env.PORT || 4000;
 
