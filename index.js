@@ -35,6 +35,7 @@ app.post('/create/:template', (req, res) => {
           else {
             string = string + array[i].skill + ", "
           }
+        }
     }
 
     skills = string
