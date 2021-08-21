@@ -20,7 +20,10 @@ app.listen(port, () => {
 app.post('/create/:template', (req, res) => {
 
     let {template} = req.params;
-    let {info, education, skills, experience, projects} = req.body;
+    let {info, education, skills, employment, projects} = req.body;
+
+    info.fname = info.fname.toUpperCase()
+    info.lname = info.lname.toUpperCase()
     
 
     let template_html = fs.readFileSync(`${template}/${template}.html`, "utf8");
@@ -34,8 +37,8 @@ app.post('/create/:template', (req, res) => {
 
     let data = {
         info: info,
-        exp : experience.array,
-        exp_title : experience.title,
+        emp : employment.array,
+        emp_title : employment.title,
         edu : education.array,
         edu_title: education.title,
         skills : skills,
