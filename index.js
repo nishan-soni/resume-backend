@@ -24,9 +24,11 @@ app.post('/create/:template', (req, res) => {
 
     let skillString = ""
 
-    if(skills.skills.length > 0) {
+    const {skillsArray} = skills
+
+    if(skillsArray.length > 0) {
         
-        let array = [...skills.skills]
+        let array = [...skillsArray]
         for(let i = 0; i <array.length; i++) {
 
           if(i === array.length-1) {
