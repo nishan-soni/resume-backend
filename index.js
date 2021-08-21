@@ -24,18 +24,23 @@ app.post('/create/:template', (req, res) => {
 
     let skillString = ""
 
-    if(skills.length > 0) {
+    if(skills.skills.length > 0) {
         
-        let array = [...skills]
+        let array = [...skills.skills]
         for(let i = 0; i <array.length; i++) {
 
           if(i === array.length-1) {
-            skillString = skillString + array[i].skill
+            skillString = skillString + array[i]
           }
           else {
-            skillString = skillString + array[i].skill + ", "
+            skillString = skillString + array[i] + ", "
           }
         }
+    }
+
+    skills = {
+        ...skills,
+        skillString : skillString
     }
 
     info.fname = info.fname.toUpperCase()
@@ -56,7 +61,7 @@ app.post('/create/:template', (req, res) => {
         emp_title : employment.title,
         edu : education.array,
         edu_title: education.title,
-        skills : skillString,
+        skills : skills,
         projects : projects
     }
 
