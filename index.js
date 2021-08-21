@@ -22,7 +22,7 @@ app.post('/create/:template', (req, res) => {
     let {template} = req.params;
     let {info, education, skills, employment, projects} = req.body;
 
-    let string = ""
+    let skillString = ""
 
     if(skills.length > 0) {
         
@@ -30,15 +30,13 @@ app.post('/create/:template', (req, res) => {
         for(let i = 0; i <array.length; i++) {
 
           if(i === array.length-1) {
-            string = string + array[i].skill
+            skillString = skillString + array[i].skill
           }
           else {
-            string = string + array[i].skill + ", "
+            skillString = skillString + array[i].skill + ", "
           }
         }
     }
-
-    skills = string
 
     info.fname = info.fname.toUpperCase()
     info.lname = info.lname.toUpperCase()
@@ -58,7 +56,7 @@ app.post('/create/:template', (req, res) => {
         emp_title : employment.title,
         edu : education.array,
         edu_title: education.title,
-        skills : skills,
+        skills : skillString,
         projects : projects
     }
 
