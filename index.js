@@ -59,10 +59,8 @@ app.post('/create/:template', (req, res) => {
     
     let data = {
         info: info,
-        emp : employment.array,
-        emp_title : employment.title,
-        edu : education.array,
-        edu_title: education.title,
+        employment : employment,
+        education : education,
         skills : skills,
         projects : projects
     }
