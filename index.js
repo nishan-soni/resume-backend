@@ -22,9 +22,9 @@ app.post('/create/:template', (req, res) => {
     let {template} = req.params;
     let {info, education, skills, employment, projects} = req.body;
 
-    let skillString = ""
-
     const {skillsArray} = skills
+
+    let skillString = ""
 
     if(skillsArray.length > 0) {
         
@@ -44,6 +44,13 @@ app.post('/create/:template', (req, res) => {
         ...skills,
         skillString : skillString
     }
+
+    projects.array.forEach(element => {
+      if(element.text2 !== '') {
+        let newText2 = "| " + element.text2
+        element.text2 = newText2
+      }
+    });
 
     info.fname = info.fname.toUpperCase()
     info.lname = info.lname.toUpperCase()
