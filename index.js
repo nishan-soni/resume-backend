@@ -76,6 +76,8 @@ app.post('/create/:template', (req, res) => {
         projects : projects
     }
 
+    //padding-top: 1.5px
+
     let html_compile = handlebars.compile(template_html)(data)
     pdf.create(html_compile, options).toStream(function(err, stream){
         res.attachment('resume_output.pdf');
