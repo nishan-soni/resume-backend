@@ -17,8 +17,10 @@ body {
   text-align: center;
 }
 
-#contact {
-    width: fit-content;
-    height: fit-content;
-    margin: auto;
+#email {
+    text-align: center;
+}
+
+#phone {
+    text-align: center;
 }
