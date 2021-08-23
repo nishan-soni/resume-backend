@@ -12,7 +12,6 @@
   }
 
   div.container {
-    margin-left: 1cm;
     margin-right: 1cm;
   }
 
@@ -60,7 +59,6 @@
   div.cls_004 {
     font-size: 34px;
     color: rgb(21, 21, 21);
-    font-weight: bold;
     font-style: normal;
     text-decoration: none;
   }
