@@ -54,6 +54,10 @@ app.post('/create/:template', (req, res) => {
 
     info.fname = info.fname.toUpperCase()
     info.lname = info.lname.toUpperCase()
+
+    if(info.phone !== '') {
+      info.phone = "Phone: " + info.phone
+    }
     
 
     let template_html = fs.readFileSync(`${template}/${template}.html`, "utf8");
