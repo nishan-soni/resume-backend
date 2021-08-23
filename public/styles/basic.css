@@ -9,6 +9,7 @@ body {
 }
 
 #name {
+margin: 0;
   text-align: center;
   color: red;
 }
@@ -18,9 +19,11 @@ body {
 }
 
 #email {
+    margin: 0;
     text-align: center;
 }
 
 #phone {
+    margin: 0;
     text-align: center;
 }
