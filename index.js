@@ -55,7 +55,7 @@ app.post('/create/:template', (req, res) => {
     info.fname = info.fname.toUpperCase()
     info.lname = info.lname.toUpperCase()
 
-    if(info.phone !== '') {
+    if(info.phone !== '' || info.phone.length === 0) {
       info.phone = "Phone: " + info.phone
     }
     
