@@ -1,0 +1,24 @@
+@font-face {
+  font-family: opensans;
+  src: url("https://resume-e.herokuapp.com/fonts/OpenSans-Light.ttf");
+}
+
+body {
+  color: black;
+  font-family: opensans;
+}
+
+#name {
+  text-align: center;
+  color: red;
+}
+
+#employment {
+  text-align: center;
+}
+
+#contact {
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+}
