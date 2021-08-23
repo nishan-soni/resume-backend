@@ -66,7 +66,8 @@ app.post('/create/:template', (req, res) => {
         format: "Letter",
         orientation: "portrait",
         margin : {
-          right : '2cm'
+          right : '1in',
+          left : '1in'
         }
         
     };
