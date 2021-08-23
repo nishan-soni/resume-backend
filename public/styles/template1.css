@@ -1,0 +1,178 @@
+@font-face {
+    font-family: opensans;
+    src: url("https://resume-e.herokuapp.com/fonts/OpenSans-Light.ttf");
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    zoom: 1;
+    font-family: opensans;
+  }
+
+  div.container {
+    margin-left: 1cm;
+    margin-right: 1cm;
+  }
+
+  div.info {
+    height: 3.5cm;
+    width: 100%;
+    background-color: #f1eded;
+  }
+
+  span.cls_003 {
+    font-size: 34px;
+    color: rgb(21, 21, 21);
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+  }
+  div.cls_003 {
+    font-size: 34px;
+    color: rgb(21, 21, 21);
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+  }
+  span.cls_006 {
+    font-size: 15.1px;
+    color: rgb(94, 94, 94);
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+  }
+  div.cls_006 {
+    font-size: 15.1px;
+    color: rgb(94, 94, 94);
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+  }
+  span.cls_004 {
+    font-size: 34px;
+    color: rgb(21, 21, 21);
+    font-weight: bold;
+    font-style: normal;
+    text-decoration: none;
+  }
+  div.cls_004 {
+    font-size: 34px;
+    color: rgb(21, 21, 21);
+    font-weight: bold;
+    font-style: normal;
+    text-decoration: none;
+  }
+  span.cls_007 {
+    font-size: 18px;
+    color: rgb(21, 21, 21);
+    font-weight: bold;
+    font-style: normal;
+    text-decoration: underline;
+  }
+  div.cls_007 {
+    font-size: 18px;
+    color: rgb(21, 21, 21);
+    font-weight: bold;
+    font-style: normal;
+    text-decoration: none;
+  }
+  span.cls_008 {
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-style: normal;
+    text-decoration: none;
+  }
+  div.cls_008 {
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-style: normal;
+    text-decoration: none;
+  }
+  span.cls_009 {
+    font-size: 13px;
+    color: rgb(119, 68, 138);
+    font-weight: bold;
+    font-style: normal;
+    text-decoration: none;
+  }
+  div.cls_009 {
+    font-size: 13px;
+    color: rgb(119, 68, 138);
+    font-weight: bold;
+    font-style: normal;
+    text-decoration: none;
+  }
+  span.cls_010 {
+    font-size: 15px;
+    color: rgb(94, 94, 94);
+    font-weight: bold;
+    font-style: normal;
+    text-decoration: none;
+  }
+  div.cls_010 {
+    font-size: 15px;
+    color: rgb(94, 94, 94);
+    font-weight: bold;
+    font-style: normal;
+    text-decoration: none;
+  }
+  span.cls_011 {
+    font-size: 14.1px;
+    color: rgb(94, 94, 94);
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+  }
+  div.cls_011 {
+    font-size: 14.1px;
+    color: rgb(94, 94, 94);
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+  }
+  span.cls_012 {
+    font-size: 14.4px;
+    color: rgb(94, 94, 94);
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+  }
+  div.cls_012 {
+    font-size: 14.4px;
+    color: rgb(94, 94, 94);
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+  }
+  span.cls_002 {
+    font-size: 13.1px;
+    color: rgb(94, 94, 94);
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+  }
+  div.cls_002 {
+    font-size: 13.1px;
+    color: rgb(94, 94, 94);
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+  }
+  span.cls_013 {
+    font-size: 11.1px;
+    color: rgb(0, 0, 0);
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+  }
+  div.cls_013 {
+    font-size: 11.1px;
+    color: rgb(0, 0, 0);
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+  }

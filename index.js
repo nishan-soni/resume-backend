@@ -60,15 +60,11 @@ app.post('/create/:template', (req, res) => {
     }
     
 
-    let template_html = fs.readFileSync(`${template}/${template}.html`, "utf8");
+    let template_html = fs.readFileSync(`templates/${template}.html`, "utf8");
 
     let options = {
         format: "Letter",
         orientation: "portrait",
-        /*border : {
-          right : '1in',
-          left : '1in'
-        }*/
         
     };
     

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://resume-e.herokuapp.com/styles/template1.css">
+  </head>
+  <body>
+    <div class="info">
+      <div
+        style="position: absolute; margin-left: 1cm; top: 24.12px"
+        class="cls_003"
+      >
+        <span class="cls_003">{{info.fname}}</span>
+      </div>
+      <div
+        style="position: absolute; left: 355px; top: 42.36px"
+        class="cls_006"
+      >
+        <span class="cls_006">Email: {{info.email}}</span>
+      </div>
+      <div
+        style="position: absolute; left: 355px; top: 59.04px"
+        class="cls_006"
+      >
+        <span class="cls_006">{{info.phone}}</span>
+      </div>
+      <div
+        style="position: absolute; margin-left: 1cm; top: 59.9px"
+        class="cls_004"
+      >
+        <span class="cls_004">{{info.lname}}</span>
+      </div>
+    </div>
+    <div class="container" style="position: relative">
+      <div class="Experience" style="position: relative; top: 15px">
+        <div style="position: relative; left: 0px" class="cls_007">
+          <span class="cls_007">{{employment.title}}</span>
+          {{#each employment.array}}
+          <div style="position: relative; padding-top: 2px" class="cls_008">
+            <span class="cls_008">{{this.text1}}</span
+            ><span class="cls_010"> | {{this.text2}}</span>
+          </div>
+          <div style="position: relative" class="cls_011">
+            <span class="cls_011">{{this.start}} - {{this.end}}</span>
+          </div>
+          {{#each this.notes}}
+          <div style="position: relative; left: 15px" class="cls_012">
+            <span class="cls_002"> {{this}}</span>
+          </div>
+          {{/each}} {{/each}}
+        </div>
+      </div>
+      <div class="education" style="position: relative; padding-top: 1.5px">
+        <div style="position: relative" class="cls_007">
+          <span class="cls_007">{{education.title}}</span>
+        </div>
+        {{#each education.array}}
+        <div style="position: relative; padding-top: 2px">
+          <div style="position: relative" class="cls_008">
+            <span class="cls_008">{{this.text1}}</span
+            ><span class="cls_010"> | {{this.text2}}</span>
+          </div>
+          <div style="position: relative" class="cls_011">
+            <span class="cls_011">{{this.start}} - {{this.end}}</span>
+          </div>
+          {{#each this.notes}}
+          <div style="position: relative; left: 15px" class="cls_012">
+            <span class="cls_002"> {{this}}</span>
+          </div>
+          {{/each}} {{/each}}
+        </div>
+      </div>
+      <div class="skills" style="position: relative; padding-top: 1.5px">
+        <div class="cls_007" style="position: relative">
+          <span class="cls_007">{{skills.title}}</span>
+        </div>
+        <div style="position: relative">
+          <span class="cls_012">{{skills.skillString}}</span>
+        </div>
+      </div>
+      <div class="projects" style="position: relative">
+        <div class="cls_007" style="position: relative; padding-top: 1.5px">
+          <span class="cls_007">{{projects.title}}</span>
+        </div>
+        {{#each projects.array}}
+        <div style="position: relative; padding-top: 2px">
+          <div style="position: relative" class="cls_008">
+            <span class="cls_008">{{this.text1}}</span
+            ><span class="cls_010"> {{this.text2}}</span>
+          </div>
+          {{#each this.notes}}
+          <div style="position: relative; left: 15px" class="cls_012">
+            <span class="cls_002"> {{this}}</span>
+          </div>
+          {{/each}}
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </body>
+</html>
