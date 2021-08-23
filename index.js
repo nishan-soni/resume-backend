@@ -21,46 +21,50 @@ app.post('/create/:template', (req, res) => {
 
     let {template} = req.params;
     let {info, education, skills, employment, projects} = req.body;
-
-    const {skillsArray} = skills
-
-    let skillString = ""
-
-    if(skillsArray.length > 0) {
-        
-        let array = [...skillsArray]
-        for(let i = 0; i <array.length; i++) {
-
-          if(i === array.length-1) {
-            skillString = skillString + array[i]
-          }
-          else {
-            skillString = skillString + array[i] + ", "
-          }
-        }
-    }
-
-    skills = {
-        ...skills,
-        skillString : skillString
-    }
-
-    projects.array.forEach(element => {
-      if(element.text2 !== '') {
-        let newText2 = "| " + element.text2
-        element.text2 = newText2
-      }
-    });
-
-    info.fname = info.fname.toUpperCase()
-    info.lname = info.lname.toUpperCase()
-
-    if(info.phone.trim() !== '' || info.phone === null) {
-      info.phone = "Phone: " + info.phone
-    }
-    
-
     let template_html = fs.readFileSync(`templates/${template}.html`, "utf8");
+
+    if(template === 'template1') {
+      const {skillsArray} = skills
+
+      let skillString = ""
+  
+      if(skillsArray.length > 0) {
+          
+          let array = [...skillsArray]
+          for(let i = 0; i <array.length; i++) {
+  
+            if(i === array.length-1) {
+              skillString = skillString + array[i]
+            }
+            else {
+              skillString = skillString + array[i] + ", "
+            }
+          }
+      }
+  
+      skills = {
+          ...skills,
+          skillString : skillString
+      }
+  
+      projects.array.forEach(element => {
+        if(element.text2 !== '') {
+          let newText2 = "| " + element.text2
+          element.text2 = newText2
+        }
+      });
+  
+      info.fname = info.fname.toUpperCase()
+      info.lname = info.lname.toUpperCase()
+  
+      if(info.phone.trim() !== '' || info.phone === null) {
+        info.phone = "Phone: " + info.phone
+      }
+    }
+
+    else if (template === 'basic') {
+      
+    }
 
     let options = {
         format: "Letter",
@@ -75,8 +79,6 @@ app.post('/create/:template', (req, res) => {
         skills : skills,
         projects : projects
     }
-
-    //padding-top: 1.5px
 
     let html_compile = handlebars.compile(template_html)(data)
     pdf.create(html_compile, options).toStream(function(err, stream){
