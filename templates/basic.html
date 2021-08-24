@@ -23,9 +23,12 @@
       <div id = work-container>
         <h3 class = 'title' id = 'work-experience'>{{employment.title}}</h3>
         <hr size="0.2mm" color="#e85a4f">
-        {{#each employment.array}}
-        <h5 class = 'item-title'>{{this.text1}}</h5>
-        {{/each}}
+        <div>
+          {{#each employment.array}}
+          <h5 class = 'item-title'>{{this.text1}}</h5>
+          {{/each}}
+        </div>
+        
       </div>
 
       <div id = education-container>
