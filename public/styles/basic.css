@@ -8,29 +8,33 @@
   src: url("https://resume-e.herokuapp.com/fonts/OpenSans-Bold.ttf");
 }
 
-body {
-  color: black;
-  font-family: opensans;
-  text-align: center;
-}
-
-#name {
-  margin: 0;
-  text-align: center;
-  color: black;
-  font-size: 40px;
-}
-
-#employment {
-  text-align: center;
-}
-
-#email {
+@media print {
+  body {
+    color: black;
+    font-family: opensans;
+    text-align: center;
+  }
+  
+  #name {
     margin: 0;
     text-align: center;
+    color: black;
+    font-size: 40px;
+  }
+  
+  #employment {
+    text-align: center;
+  }
+  
+  #email {
+      margin: 0;
+      text-align: center;
+  }
+  
+  #phone {
+      margin: 0;
+      text-align: center;
+  }
 }
 
-#phone {
-    margin: 0;
-    text-align: center;
-}
+
