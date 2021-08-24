@@ -11,6 +11,7 @@
 body {
   color: black;
   font-family: opensans;
+  text-align: center;
 }
 
 #name {
