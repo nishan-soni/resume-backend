@@ -1,17 +1,22 @@
 @font-face {
-  font-family: opensans;
+  font-family: openSans;
   src: url("https://resume-e.herokuapp.com/fonts/OpenSans-Light.ttf");
 }
 
 @font-face {
-  font-family: opensansBold;
+  font-family: openSansBold;
   src: url("https://resume-e.herokuapp.com/fonts/OpenSans-Bold.ttf");
+}
+
+@font-face {
+  font-family: openSansItalic;
+  src: url("https://resume-e.herokuapp.com/fonts/OpenSans-LightItalic.ttf");
 }
 
 body {
   margin: 0.4cm 1.2cm 0.4cm 1.2cm;
   color: black;
-  font-family: opensans;
+  font-family: openSans;
 }
 
 #name {
@@ -21,16 +26,22 @@ body {
   font-size: 40px;
 }
 
+#email {
+  margin: 0;
+  text-align: center;
+}
+
+#phone {
+  margin: 0;
+  text-align: center;
+}
+
 .title {
   margin-bottom: 5px;
 }
 
-#email {
-    margin: 0;
-    text-align: center;
+.item-title {
+  font-family: openSansBold;
 }
 
-#phone {
-    margin: 0;
-    text-align: center;
-}
+
