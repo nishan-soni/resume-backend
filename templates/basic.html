@@ -20,25 +20,31 @@
     <div id="container">
 
       <div id = work-container>
-        <h2 class = 'title'>Work Experience</h2>
+        <h3 class = 'title' id = 'work-experience'>{{employment.title}}</h3>
         <hr size="0.2mm" color="#e85a4f">
       </div>
 
       <div id = education-container>
-        <h2 class="title">Education</h2>
+        <h3 class="title">Education</h3>
         <hr size="0.2mm" color="#e85a4f">
       </div>
 
       <div id = 'skills-container'>
-        <h2 class ="title">Skills</h2>
+        <h3 class ="title">Skills</h3>
         <hr size="0.2mm" color="#e85a4f">
       </div>
 
       <div id = 'projects-container'>
-        <h2 class ="title">Projects</h2>
+        <h3 class ="title">Projects</h3>
         <hr size="0.2mm" color="#e85a4f">
       </div>
 
     </div>
   </body>
+
+  <script>
+    if (document.getElementById('work-experience').textContent === "") {
+      document.getElementById('work-container').style.display = 'hidden'
+    }
+  </script>
 </html>
