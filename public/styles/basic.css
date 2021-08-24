@@ -3,16 +3,22 @@
   src: url("https://resume-e.herokuapp.com/fonts/OpenSans-Light.ttf");
 }
 
+@font-face {
+  font-family: opensansBold;
+  src: url("https://resume-e.herokuapp.com/fonts/OpenSans-Bold.ttf");
+}
+
 body {
   color: black;
   font-family: opensans;
 }
 
 #name {
-margin: 0;
+  font-family: opensansBold;
+  margin: 0;
   text-align: center;
-  color: red;
-  font-size: 30px;
+  color: black;
+  font-size: 40px;
 }
 
 #employment {
