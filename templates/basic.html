@@ -17,14 +17,15 @@
       <h5 id="email">{{info.email}}</h5>
       <h5 id="phone">{{info.phone}}</h5>
     </div>
+
     <div id="container">
 
       <div id = work-container>
         <h3 class = 'title' id = 'work-experience'>{{employment.title}}</h3>
-        {{#each employment.array}}
-        <h4 class = 'item-title'>{{this.text1}}</h4>
-        {{/each}}
         <hr size="0.2mm" color="#e85a4f">
+        {{#each employment.array}}
+        <h5 class = 'item-title'>{{this.text1}}</h5>
+        {{/each}}
       </div>
 
       <div id = education-container>
