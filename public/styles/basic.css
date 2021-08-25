@@ -44,7 +44,7 @@ body {
 .item-title {
   font-family: openSansBold;
   margin-bottom: 0;
-  margin-top: 4px;
+  margin-top: 5px;
 }
 
 .item-date {
@@ -55,6 +55,7 @@ body {
 .item-text2 {
   margin: 0;
   font-family: opensans;
+  margin-top: 5px
 }
 
 .notes {
