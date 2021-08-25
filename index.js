@@ -63,7 +63,12 @@ app.post('/create/:template', (req, res) => {
     }
 
     else if (template === 'basic') {
-      
+      projects.array.forEach(element => {
+        if(element.text2 !== '') {
+          let newText2 = "| " + element.text2
+          element.text2 = newText2
+        }
+      });
     }
 
     let options = {
