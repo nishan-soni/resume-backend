@@ -45,9 +45,13 @@ body {
   margin: 0;
 }
 
-.item-italic {
+.item-date {
   font-family: openSansItalic;
   margin: 0;
 }
 
+.item-text2 {
+  margin: 0;
+  font-family: opensans;
+}
 
