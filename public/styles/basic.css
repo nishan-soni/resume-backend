@@ -65,3 +65,10 @@ body {
   font-family: opensans;
 }
 
+.skill {
+  width: fit-content;
+  height: fit-content;
+  color: white;
+  border-radius: 3px;
+}
+
