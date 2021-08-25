@@ -55,6 +55,11 @@
       <div id = 'skills-container'>
         <h3 class ="title" id = 'skills'>{{skills.title}}</h3>
         <hr size="0.2mm" color="#e85a4f">
+        <div>
+          {{#each skills.array}}
+          <span>{{this}}</span>
+          {{/each}}
+        </div>
       </div>
 
       <div id = 'projects-container'>
