@@ -24,8 +24,8 @@ app.post('/create/:template', (req, res) => {
     let template_html = fs.readFileSync(`templates/${template}.html`, "utf8");
 
     if(template === 'template1') {
-      const {skillsArray} = skills
-
+      const {array} = skills
+      let skillsArray = array
       let skillString = ""
   
       if(skillsArray.length > 0) {
