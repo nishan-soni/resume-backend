@@ -27,12 +27,12 @@
           {{#each employment.array}}
           <h5 style = 'margin: 0;' ><span class="item-title">{{this.text1}} </span><span class="item-text2">| {{this.text2}}</span></h5>
           <h6 class = 'item-date'>{{this.start}} - {{this.end}}</h6>
-          {{/each}}
-          <div class = 'notes'>
+          <div>
             {{#each this.notes}}
             <h6 class="notes">- {{this}}</h6>
             {{/each}}
           </div>
+          {{/each}}
         </div>
         
       </div>
