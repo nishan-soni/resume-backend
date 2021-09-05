@@ -64,7 +64,7 @@ app.post('/create/:template', (req, res) => {
 
     else if (template === 'basic') {
       projects.array.forEach(element => {
-        if(element.text2 != "" || element.text2 != null) {
+        if(element.text2 != "" || element.text2 !== null) {
           let newText2 = `| ${element.text2}`
           element.text2 = newText2
         }
