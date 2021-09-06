@@ -22,7 +22,7 @@
 
       <div id = work-container>
         <h3 class = 'title' id = 'work-experience'>{{employment.title}}</h3>
-        <hr size="0.2mm" color="#e85a4f">
+        <hr size="0.2mm" color="{{color}}">
         <div>
           {{#each employment.array}}
           <h5 style = 'margin: 0;' ><span class="item-title">{{this.text1}} </span><span class="item-text2">| {{this.text2}}</span></h5>
@@ -38,7 +38,7 @@
 
       <div id = education-container>
         <h3 class="title" id = 'education'>{{education.title}}</h3>
-        <hr size="0.2mm" color="#e85a4f">
+        <hr size="0.2mm" color="{{color}}">
         <div>
           {{#each education.array}}
           <h5 style = 'margin: 0;' ><span class="item-title">{{this.text1}} </span><span class="item-text2">| {{this.text2}}</span></h5>
@@ -57,14 +57,14 @@
         <hr size="0.2mm" color="{{color}}">
         <div>
           {{#each skills.array}}
-          <span class="skill" style="background-color: {{color}}">{{this}}</span>
+          <span class="skill" style="background-color:{{color}}">{{this}}</span>
           {{/each}}
         </div>
       </div>
 
       <div id = 'projects-container'>
         <h3 class ="title" id = 'projects'>{{projects.title}}</h3>
-        <hr size="0.2mm" color="#e85a4f">
+        <hr size="0.2mm" color="{{color}}">
         <div>
           {{#each projects.array}}
           <h5 style = 'margin: 0;' ><span class="item-title">{{this.text1}}</span><span class="item-text2"> {{this.text2}}</span></h5>
