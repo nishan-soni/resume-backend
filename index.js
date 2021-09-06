@@ -20,7 +20,7 @@ app.listen(port, () => {
 app.post('/create/:template', (req, res) => {
 
     let {template} = req.params;
-    let {info, education, skills, employment, projects} = req.body;
+    let {info, education, skills, employment, projects, color} = req.body;
     let template_html = fs.readFileSync(`templates/${template}.html`, "utf8");
 
     if(template === 'template1') {
@@ -68,6 +68,9 @@ app.post('/create/:template', (req, res) => {
           let newText2 = `| ${element.text2}`
           element.text2 = newText2
         }
+        if(color === "") {
+          color = "#e85a4f"
+        }
       });
     }
 
@@ -83,7 +86,8 @@ app.post('/create/:template', (req, res) => {
         employment : employment,
         education : education,
         skills : skills,
-        projects : projects
+        projects : projects,
+        color : color
     }
 
     let html_compile = handlebars.compile(template_html)(data)
