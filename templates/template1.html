@@ -115,6 +115,25 @@
           {{/each}}
         </div>
 
+        <div class="certificates" style="position: relative;">
+          <div class="cls_007" style="position: relative;">
+            <span class="cls_007">{{certificates.title}}</span>
+          </div>
+          {{#each certificates.array}}
+          <div style="position: relative; padding-top: 2px">
+            <div style="position: relative" class="cls_008">
+              <span class="cls_008">{{this.text1}}</span
+              ><span class="cls_010"> {{this.text2}}</span>
+            </div>
+            {{#each this.notes}}
+            <div style="position: relative; margin-left: 15px" class="cls_012">
+              <span class="cls_002"> {{this}}</span>
+            </div>
+            {{/each}}
+          </div>
+          {{/each}}
+        </div>
+
       </div>
 
 
