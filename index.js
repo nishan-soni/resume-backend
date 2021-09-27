@@ -20,7 +20,7 @@ app.listen(port, () => {
 app.post('/create/:template', (req, res) => {
 
     let {template} = req.params;
-    let {info, education, skills, employment, projects, color} = req.body;
+    let {info, education, skills, employment, projects, certificates, color} = req.body;
     let template_html = fs.readFileSync(`templates/${template}.html`, "utf8");
 
     if(template === 'template1') {
@@ -53,6 +53,13 @@ app.post('/create/:template', (req, res) => {
           element.text2 = newText2
         }
       });
+
+      certificates.array.forEach(element => {
+        if(element.text2 !== "") {
+          let newText2 = `| ${element.text2}`
+          element.text2 = newText2
+        }
+      });
   
       info.fname = info.fname.toUpperCase()
       info.lname = info.lname.toUpperCase()
@@ -68,10 +75,18 @@ app.post('/create/:template', (req, res) => {
           let newText2 = `| ${element.text2}`
           element.text2 = newText2
         }
-        if(color === "") {
-          color = "#e85a4f"
+      });
+
+      certificates.array.forEach(element => {
+        if(element.text2 !== "") {
+          let newText2 = `| ${element.text2}`
+          element.text2 = newText2
         }
       });
+      
+      if(color === "") {
+        color = "#e85a4f"
+      }
     }
 
     
@@ -87,6 +102,7 @@ app.post('/create/:template', (req, res) => {
         education : education,
         skills : skills,
         projects : projects,
+        certificates : certificates,
         color : color
     }
 

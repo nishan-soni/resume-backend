@@ -83,6 +83,21 @@
         </div>
       </div>
 
+      <div id = 'certificates-container'>
+        <h3 class ="title" id = 'certificates'>{{certificates.title}}</h3>
+        <hr size="0.2mm" color="{{color}}">
+        <div>
+          {{#each certificates.array}}
+          <h5 style = 'margin: 0;' ><span class="item-title">{{this.text1}}</span><span class="item-text2"> {{this.text2}}</span></h5>
+          <div>
+            {{#each this.notes}}
+            <h6 class="notes">- {{this}}</h6>
+            {{/each}}
+          </div>
+          {{/each}}
+        </div>
+      </div>
+
     </div>
   </body>
 
@@ -98,6 +113,9 @@
     }
     if (document.getElementById('projects').textContent === "") {
       document.getElementById('projects-container').style.display = 'none'
+    }
+    if (document.getElementById('certificates').textContent === "") {
+      document.getElementById('certificates-container').style.display = 'none'
     }
   </script>
 </html>
