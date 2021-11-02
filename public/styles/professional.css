@@ -9,8 +9,8 @@
   }
   
   @font-face {
-    font-family: openSansItalic;
-    src: url("https://resume-e.herokuapp.com/fonts/OpenSans-LightItalic.ttf");
+    font-family: source_serif;
+    src: url("https://resume-e.herokuapp.com/fonts/SourceSerifPro-Regular.ttf");
   }
   
   body {
@@ -20,6 +20,7 @@
   }
   
   #name {
+    font-family: source_serif;
     margin: 0;
     text-align: center;
     color: black;
@@ -42,19 +43,17 @@
   }
   
   .item-title {
-    font-family: seriflight;
     margin-bottom: 0;
     margin-top: 5px;
   }
   
   .item-date {
-    font-family: seriflight_italic;
     margin: 0;
   }
   
   .item-text2 {
+    font-family: seriflight_italic;
     margin: 0;
-    font-family: seriflight;
     margin-top: 5px
   }
   
@@ -62,7 +61,6 @@
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 0.3cm;
-    font-family: seriflight;
   }
   
   .skill {
