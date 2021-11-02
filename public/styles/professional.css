@@ -54,7 +54,8 @@
   .item-text2 {
     font-family: seriflight_italic;
     margin: 0;
-    margin-top: 5px
+    margin-top: 5px;
+    font-size: 0.7em;
   }
   
   .notes {
