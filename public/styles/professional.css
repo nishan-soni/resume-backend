@@ -1,6 +1,6 @@
 @font-face {
-    font-family: openSans;
-    src: url("https://resume-e.herokuapp.com/fonts/OpenSans-Light.ttf");
+    font-family: seriflight;
+    src: url("https://resume-e.herokuapp.com/fonts/SourceSerifPro-Light.ttf");
   }
   
   @font-face {
@@ -16,7 +16,7 @@
   body {
     margin: 0.4cm 1.2cm 0.4cm 1.2cm;
     color: black;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: seriflight
   }
   
   #name {
@@ -42,19 +42,19 @@
   }
   
   .item-title {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: seriflight;
     margin-bottom: 0;
     margin-top: 5px;
   }
   
   .item-date {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: seriflight;
     margin: 0;
   }
   
   .item-text2 {
     margin: 0;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: seriflight;
     margin-top: 5px
   }
   
@@ -62,7 +62,7 @@
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 0.3cm;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: seriflight;
   }
   
   .skill {
