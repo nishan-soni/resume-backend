@@ -1,0 +1,78 @@
+@font-face {
+    font-family: openSans;
+    src: url("https://resume-e.herokuapp.com/fonts/OpenSans-Light.ttf");
+  }
+  
+  @font-face {
+    font-family: openSansBold;
+    src: url("https://resume-e.herokuapp.com/fonts/OpenSans-Bold.ttf");
+  }
+  
+  @font-face {
+    font-family: openSansItalic;
+    src: url("https://resume-e.herokuapp.com/fonts/OpenSans-LightItalic.ttf");
+  }
+  
+  body {
+    margin: 0.4cm 1.2cm 0.4cm 1.2cm;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  #name {
+    margin: 0;
+    text-align: center;
+    color: black;
+    font-size: 40px;
+  }
+  
+  #email {
+    margin: 0;
+    text-align: center;
+  }
+  
+  #phone {
+    margin: 0;
+    text-align: center;
+  }
+  
+  .title {
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+  
+  .item-title {
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 0;
+    margin-top: 5px;
+  }
+  
+  .item-date {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+  }
+  
+  .item-text2 {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 5px
+  }
+  
+  .notes {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0.3cm;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .skill {
+    width: fit-content;
+    height: fit-content;
+    color: white;
+    border-radius: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+    font-size: medium;
+  }
+  
+  
