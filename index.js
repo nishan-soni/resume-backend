@@ -33,8 +33,14 @@ app.post('/create/:template', (req, res) => {
       array.forEach((value, index) => {
         let date = new Date(array[index].start)
         array[index].start = months[date.getMonth()].toUpperCase() + " " + date.getFullYear().toString()
-        date = new Date(array[index].end)
-        array[index].end = months[date.getMonth()].toUpperCase() + " " + date.getFullYear().toString()
+        if(array[index].end===null) {
+          array[index].end = "PRESENT"
+        }
+        else {
+          date = new Date(array[index].end)
+          array[index].end = months[date.getMonth()].toUpperCase() + " " + date.getFullYear().toString()
+
+        }
       })
     }
     if (employment.array.length > 0) {
