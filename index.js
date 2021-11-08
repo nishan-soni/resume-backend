@@ -5,12 +5,15 @@ const handlebars = require('handlebars')
 const cors = require('cors')
 const app = express();
 
+
 //middleware used to read requests
 app.use(express.json());
 app.use(cors())
 app.use(express.static('public')) //serve public files such as css for the resume
 
+
 const port = process.env.PORT || 4000;
+//app.use(express.static(path.resolve(__dirname, '../resume-client/build')));
 
 app.listen(port, () => {
     console.log('listening on 4000')
@@ -19,9 +22,21 @@ app.listen(port, () => {
 //creates the resume
 app.post('/create/:template', (req, res) => {
 
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
     let {template} = req.params;
     let {info, education, skills, employment, projects, certificates, color} = req.body;
     let template_html = fs.readFileSync(`templates/${template}.html`, "utf8");
+
+    if (education.array > 0) {
+      const {array} = education
+      array.forEach((value, index) => {
+        let date = new Date(array[index].start)
+        array[index].start = months[date.getMonth()].toUpperCase() + " " + date.getFullYear().toString()
+        date = new Date(array[index].end)
+        array[index].end = months[date.getMonth()].toUpperCase() + " " + date.getFullYear().toString()
+      })
+    }
 
     if(template === 'template1') {
       const {array} = skills
