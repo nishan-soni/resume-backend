@@ -28,8 +28,17 @@ app.post('/create/:template', (req, res) => {
     let {info, education, skills, employment, projects, certificates, color} = req.body;
     let template_html = fs.readFileSync(`templates/${template}.html`, "utf8");
 
-    if (education.array > 0) {
+    if (education.array.length > 0) {
       const {array} = education
+      array.forEach((value, index) => {
+        let date = new Date(array[index].start)
+        array[index].start = months[date.getMonth()].toUpperCase() + " " + date.getFullYear().toString()
+        date = new Date(array[index].end)
+        array[index].end = months[date.getMonth()].toUpperCase() + " " + date.getFullYear().toString()
+      })
+    }
+    if (employment.array.length > 0) {
+      const {array} = employment
       array.forEach((value, index) => {
         let date = new Date(array[index].start)
         array[index].start = months[date.getMonth()].toUpperCase() + " " + date.getFullYear().toString()
