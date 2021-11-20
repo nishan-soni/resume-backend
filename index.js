@@ -1,32 +1,37 @@
-const pdf = require("html-pdf")
-const fs = require("fs");
+//const pdf = require("html-pdf")
+//const fs = require("fs");
 const express = require('express');
-const handlebars = require('handlebars')
+//const handlebars = require('handlebars')
 const cors = require('cors')
 const app = express();
+const routes = require('./routes/createResume')
 
 
 //middleware used to read requests
 app.use(express.json());
 app.use(cors())
 app.use(express.static('public')) //serve public files such as css for the resume
-
+app.use('/', routes)
 
 const port = process.env.PORT || 4000;
 //app.use(express.static(path.resolve(__dirname, '../resume-client/build')));
+
+
 
 app.listen(port, () => {
     console.log('listening on 4000')
 })
 
+
+
 //creates the resume
-app.post('/create/:template', (req, res) => {
+/*app.post('/create/:template', (req, res) => {
 
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
     let {template} = req.params;
     let {info, education, skills, employment, projects, certificates, color} = req.body;
-    let template_html = fs.readFileSync(`templates/${template}.html`, "utf8");
+    let template_html = fs.readFileSync(`resume_templates/${template}.html`, "utf8");
 
     if (education.array.length > 0) {
       const {array} = education
@@ -172,4 +177,4 @@ app.post('/create/:template', (req, res) => {
         stream.pipe(res)
       });
 
-})
+})*/
