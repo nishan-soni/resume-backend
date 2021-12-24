@@ -59,14 +59,17 @@
   }
   
   .notes {
+    padding-top: none;
     margin: none;
   }
 
   ul {
+    padding-top: none;
     margin: none;
   }
 
   li {
+    padding-top: none;
     margin: none;
   }
   
