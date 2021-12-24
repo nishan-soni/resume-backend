@@ -60,7 +60,7 @@
   
   .notes {
     padding-top: none;
-    margin: none;
+    margin: 0;
   }
 
   ul {
