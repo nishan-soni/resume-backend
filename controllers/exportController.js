@@ -9,7 +9,7 @@ const exportController = {
         let template_html = fs.readFileSync(`resume_templates/${template}.html`, "utf8");
 
         const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
+        // EDIT THIS SOON
         if (education.array.length > 0) {
             const {array} = education
             array.forEach((value, index) => {
