@@ -67,12 +67,14 @@ ul {
   padding-top: none;
   margin-top: 0;
   margin-bottom: 0;
+  font-size: small;
 }
 
 li {
   margin-bottom: 0;
   padding-top: 0;
   margin: none;
+  font-size: small;
 }
 
 .skill {

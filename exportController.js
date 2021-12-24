@@ -3,6 +3,7 @@ const handlebars = require('handlebars')
 const fs = require("fs")
 
 const exportController = {
+    
     exportResume(req,res) {
         let {template} = req.params;
         let {info, education, skills, employment, projects, certificates, color} = req.body;
