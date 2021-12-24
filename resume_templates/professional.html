@@ -60,7 +60,7 @@
         <h3 class="title" id = 'projects'>{{projects.title}}</h3>
         <hr size="0.2mm" color="{{color}}">
         <div>
-            {{#each education.array}}
+            {{#each projects.array}}
             <h5 style = 'margin: 0;' ><span class="item-title">{{this.title}} </span><span style="float: right">{{this.start}} - {{this.end}}</span></h5>
             <h5 class = 'item-text2' style="margin: 0">{{this.subtitle}}</h5>
             <div>
@@ -84,9 +84,6 @@
     }
     if (document.getElementById('projects').textContent === "") {
       document.getElementById('projects-container').style.display = 'none'
-    }
-    if (document.getElementById('certificates').textContent === "") {
-      document.getElementById('certificates-container').style.display = 'none'
     }
   </script>
 </html>

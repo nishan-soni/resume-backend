@@ -144,7 +144,6 @@ const exportController = {
             education : education,
             skills : skills,
             projects : projects,
-            certificates : certificates,
             color : color
         }
         let compiled_template = handlebars.compile(template_html)(data)

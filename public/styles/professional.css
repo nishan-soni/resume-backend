@@ -1,84 +1,83 @@
 @font-face {
-    font-family: seriflight;
-    src: url("https://resume-e.herokuapp.com/fonts/SourceSerifPro-Light.ttf");
-  }
-  
-  @font-face {
-    font-family: seriflight_italic;
-    src: url("https://resume-e.herokuapp.com/fonts/SourceSerifPro-LightItalic.ttf");
-  }
-  
-  @font-face {
-    font-family: source_serif;
-    src: url("https://resume-e.herokuapp.com/fonts/SourceSerifPro-Regular.ttf");
-  }
-  
-  body {
-    margin: 0.4cm 1.2cm 0.4cm 1.2cm;
-    color: black;
-    font-family: seriflight
-  }
-  
-  #name {
-    font-family: source_serif;
-    margin: 0;
-    text-align: center;
-    color: black;
-    font-size: 40px;
-  }
-  
-  #email {
-    margin: 0;
-    text-align: center;
-  }
-  
-  #phone {
-    margin: 0;
-    text-align: center;
-  }
-  
-  .title {
-    margin-bottom: 5px;
-    margin-top: 5px;
-  }
-  
-  .item-title {
-    margin-bottom: 0;
-    margin-top: 5px;
-  }
-  
-  .item-date {
-    margin: 0;
-  }
-  
-  .item-text2 {
-    font-family: seriflight_italic;
-    margin: 0;
-    margin-top: 5px;
-    font-size: 0.7em;
-  }
-  
-  .notes {
-    padding-top: none;
-    margin: 0;
-  }
+  font-family: seriflight;
+  src: url("https://resume-e.herokuapp.com/fonts/SourceSerifPro-Light.ttf");
+}
 
-  ul {
-    padding-top: none;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
+@font-face {
+  font-family: seriflight_italic;
+  src: url("https://resume-e.herokuapp.com/fonts/SourceSerifPro-LightItalic.ttf");
+}
 
-  li {
-    margin-bottom: 0;
-    padding-top: 0;
-    margin: none;
-  }
+@font-face {
+  font-family: source_serif;
+  src: url("https://resume-e.herokuapp.com/fonts/SourceSerifPro-Regular.ttf");
+}
+
+body {
+  margin: 0.4cm 1.2cm 0.4cm 1.2cm;
+  color: black;
+  font-family: seriflight
+}
+
+#name {
+  font-family: source_serif;
+  margin: 0;
+  text-align: center;
+  color: black;
+  font-size: 40px;
+}
+
+#email {
+  margin: 0;
+  text-align: center;
+}
+
+#phone {
+  margin: 0;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.item-title {
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+
+.item-date {
+  margin: 0;
+}
+
+.item-text2 {
+  font-family: seriflight_italic;
+  margin: 0;
+  margin-top: 5px;
+  font-size: 0.7em;
+}
+
+.notes {
+  padding-top: none;
+  margin: 0;
+}
+
+ul {
+  padding-top: none;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: 0;
+  padding-top: 0;
+  margin: none;
+}
+
+.skill {
+  width: fit-content;
+  height: fit-content;
   
-  .skill {
-    width: fit-content;
-    height: fit-content;
-    
-  }
-  
-  
+}
+
