@@ -25,8 +25,8 @@
         <hr size="0.2mm" color="{{color}}">
         <div>
           {{#each employment.array}}
-          <h5 style = 'margin: 0;' ><span class="item-title">{{this.text1}} </span><span style="float: right">{{this.start}} - {{this.end}}</span></h5>
-          <h5 class = 'item-text2' style="margin: 0">{{this.text2}}</h5>
+          <h5 style = 'margin: 0;' ><span class="item-title">{{this.title}} </span><span style="float: right">{{this.start}} - {{this.end}}</span></h5>
+          <h5 class = 'item-text2' style="margin: 0">{{this.subtitle}}</h5>
           <div>
             {{{this.notes}}}
           </div>
@@ -39,8 +39,8 @@
         <hr size="0.2mm" color="{{color}}">
         <div>
             {{#each education.array}}
-            <h5 style = 'margin: 0;' ><span class="item-title">{{this.text1}} </span><span style="float: right">{{this.start}} - {{this.end}}</span></h5>
-            <h5 class = 'item-text2' style="margin: 0">{{this.text2}}</h5>
+            <h5 style = 'margin: 0;' ><span class="item-title">{{this.title}} </span><span style="float: right">{{this.start}} - {{this.end}}</span></h5>
+            <h5 class = 'item-text2' style="margin: 0">{{this.subtitle}}</h5>
             <div>
               {{#each this.notes}}
               <h6 class="notes">- {{this}}</h6>
