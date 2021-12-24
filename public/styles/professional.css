@@ -65,6 +65,10 @@
   ul {
     margin: none;
   }
+
+  li {
+    margin: none;
+  }
   
   .skill {
     width: fit-content;
