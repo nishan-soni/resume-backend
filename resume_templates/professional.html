@@ -42,9 +42,7 @@
             <h5 style = 'margin: 0;' ><span class="item-title">{{this.title}} </span><span style="float: right">{{this.start}} - {{this.end}}</span></h5>
             <h5 class = 'item-text2' style="margin: 0">{{this.subtitle}}</h5>
             <div>
-              {{#each this.notes}}
-              <h6 class="notes">- {{this}}</h6>
-              {{/each}}
+              <h6 class="notes">{{{this.notes}}}</h6>
             </div>
             {{/each}}
           </div>
@@ -58,38 +56,19 @@
         </div>
       </div>
 
-      <div id = 'projects-container'>
-        <h3 class ="title" id = 'projects'>{{projects.title}}</h3>
+      <div id = projects-container>
+        <h3 class="title" id = 'projects'>{{projects.title}}</h3>
         <hr size="0.2mm" color="{{color}}">
         <div>
-          {{#each projects.array}}
-          <h5 style = 'margin: 0;' ><span class="item-title">{{this.text1}}</span></h5>
-          <h5 class = 'item-text2' style="margin: 0">{{this.text2}}</h5>
-          <div>
-            {{#each this.notes}}
-            <h6 class="notes">- {{this}}</h6>
+            {{#each education.array}}
+            <h5 style = 'margin: 0;' ><span class="item-title">{{this.title}} </span><span style="float: right">{{this.start}} - {{this.end}}</span></h5>
+            <h5 class = 'item-text2' style="margin: 0">{{this.subtitle}}</h5>
+            <div>
+              <h6 class="notes">{{{this.notes}}}</h6>
+            </div>
             {{/each}}
           </div>
-          {{/each}}
-        </div>
       </div>
-
-      <div id = 'certificates-container'>
-        <h3 class ="title" id = 'certificates'>{{certificates.title}}</h3>
-        <hr size="0.2mm" color="{{color}}">
-        <div>
-          {{#each certificates.array}}
-          <h5 style = 'margin: 0;' ><span class="item-title">{{this.text1}}</span></h5>
-          <h5 class = 'item-text2' style="margin: 0">{{this.text2}}</h5>
-          <div>
-            {{#each this.notes}}
-            <h6 class="notes">- {{this}}</h6>
-            {{/each}}
-          </div>
-          {{/each}}
-        </div>
-      </div>
-
     </div>
   </body>
 
