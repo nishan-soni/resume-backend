@@ -65,11 +65,11 @@
 
   ul {
     padding-top: none;
-    margin: none;
+    margin-top: 0;
   }
 
   li {
-    padding-top: none;
+    padding-top: 0;
     margin: none;
   }
   
