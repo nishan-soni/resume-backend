@@ -5,8 +5,8 @@ const routes = require('./routes/createResume')
 
 
 //middleware used to read requests
-app.use(express.json());
 app.use(cors())
+app.use(express.json());
 app.use(express.static('public')) //serve public files such as css for the resume
 app.use('/', routes)
 
