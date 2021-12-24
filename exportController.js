@@ -149,8 +149,12 @@ const exportController = {
         }
         let compiled_template = handlebars.compile(template_html)(data)
         let resume = html_pdf.create(compiled_template, options)
-        resume.toStream((err, stream) => {
+        /*resume.toStream((err, stream) => {
             res.attachment('resume.pdf')
+            stream.pipe(res)
+        })*/
+        compiled_template.toStream((err, stream) => {
+            res.attachment('resume.html')
             stream.pipe(res)
         })
     },
