@@ -22,9 +22,9 @@ const exportController = {
         sections.forEach((section) => {
             section.array.forEach((element) => {
                 const newStart = new Date(element.start)
-                section.start = months[newStart.getMonth].toUpperCase() + " " + newStart.getFullYear().toString()
+                section.start = months[newStart.getMonth()]+ " " + newStart.getFullYear().toString()
                 const newEnd = new Date(element.end)
-                section.end = months[newEnd.getMonth].toUpperCase() + " " + newEnd.getFullYear().toString()
+                section.end = months[newEnd.getMonth()] + " " + newEnd.getFullYear().toString()
                 if (element.currentChecked === true) {
                     section.start = "CURRENT"
                 }
