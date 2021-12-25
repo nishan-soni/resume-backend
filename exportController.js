@@ -22,13 +22,11 @@ const exportController = {
         sections.forEach((section) => {
             section.array.forEach((element) => {
                 // IF ELEMENT.START IS NOT NUTLL THEN newStart = new Date(element.start)
-                const newStart = null
                 if (element.start !== null) {
                     const newStart = new Date(element.start)
                     element.start = months[newStart.getMonth()]+ " " + newStart.getFullYear().toString()
                     element.start += " - "
                 }
-                const newEnd = null
                 if (element.end !== null) {
                     const newEnd = new Date(element.end)
                     element.end = months[newEnd.getMonth()] + " " + newEnd.getFullYear().toString()
