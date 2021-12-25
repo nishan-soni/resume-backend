@@ -33,9 +33,7 @@ const exportController = {
                 }
                 if (element.currentChecked === true) {
                     element.end = "CURRENT"
-                }
-
-                
+                }                
             })
         })
 
@@ -47,6 +45,7 @@ const exportController = {
             projects : projects,
             color : color
         }
+        
         let compiled_template = handlebars.compile(template_html)(data)
         let resume = html_pdf.create(compiled_template, options)
         resume.toStream((err, stream) => {

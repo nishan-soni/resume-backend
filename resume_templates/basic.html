@@ -31,12 +31,10 @@
         <hr size="0.2mm" color="{{color}}">
         <div>
           {{#each employment.array}}
-          <h5 style = 'margin: 0;' ><span class="item-title">{{this.text1}} </span><span class="item-text2">| {{this.text2}}</span></h5>
-          <h6 class = 'item-date'>{{this.start}} - {{this.end}}</h6>
+          <h5 style = 'margin: 0;' ><span class="item-title">{{this.title}} </span><span class="item-subtitle">| {{this.subtitle}}</span></h5>
+          <h6 class = 'item-date'>{{this.start}}{{this.end}}</h6>
           <div>
-            {{#each this.notes}}
-            <h6 class="notes">- {{this}}</h6>
-            {{/each}}
+            <h6 class="notes">{{{this.notes}}}</h6>
           </div>
           {{/each}}
         </div>
@@ -47,12 +45,10 @@
         <hr size="0.2mm" color="{{color}}">
         <div>
           {{#each education.array}}
-          <h5 style = 'margin: 0;' ><span class="item-title">{{this.text1}} </span><span class="item-text2">| {{this.text2}}</span></h5>
-          <h6 class = 'item-date'>{{this.start}} - {{this.end}}</h6>
+          <h5 style = 'margin: 0;' ><span class="item-title">{{this.title}} </span><span class="item-subtitle">| {{this.subtitle}}</span></h5>
+          <h6 class = 'item-date'>{{this.start}}{{this.end}}</h6>
           <div>
-            {{#each this.notes}}
-            <h6 class="notes">- {{this}}</h6>
-            {{/each}}
+            <h6 class="notes">{{{this.notes}}}</h6>
           </div>
           {{/each}}
         </div>
@@ -68,31 +64,15 @@
         </div>
       </div>
 
-      <div id = 'projects-container'>
-        <h3 class ="title" id = 'projects'>{{projects.title}}</h3>
+      <div id = projects-container>
+        <h3 class="title" id = 'projects'>{{projects.title}}</h3>
         <hr size="0.2mm" color="{{color}}">
         <div>
-          {{#each projects.array}}
-          <h5 style = 'margin: 0;' ><span class="item-title">{{this.text1}}</span><span class="item-text2"> {{this.text2}}</span></h5>
+          {{#each education.array}}
+          <h5 style = 'margin: 0;' ><span class="item-title">{{this.title}} </span><span class="item-subtitle">| {{this.subtitle}}</span></h5>
+          <h6 class = 'item-date'>{{this.start}}{{this.end}}</h6>
           <div>
-            {{#each this.notes}}
-            <h6 class="notes">- {{this}}</h6>
-            {{/each}}
-          </div>
-          {{/each}}
-        </div>
-      </div>
-
-      <div id = 'certificates-container'>
-        <h3 class ="title" id = 'certificates'>{{certificates.title}}</h3>
-        <hr size="0.2mm" color="{{color}}">
-        <div>
-          {{#each certificates.array}}
-          <h5 style = 'margin: 0;' ><span class="item-title">{{this.text1}}</span><span class="item-text2"> {{this.text2}}</span></h5>
-          <div>
-            {{#each this.notes}}
-            <h6 class="notes">- {{this}}</h6>
-            {{/each}}
+            <h6 class="notes">{{{this.notes}}}</h6>
           </div>
           {{/each}}
         </div>
@@ -113,9 +93,6 @@
     }
     if (document.getElementById('projects').textContent === "") {
       document.getElementById('projects-container').style.display = 'none'
-    }
-    if (document.getElementById('certificates').textContent === "") {
-      document.getElementById('certificates-container').style.display = 'none'
     }
   </script>
 </html>

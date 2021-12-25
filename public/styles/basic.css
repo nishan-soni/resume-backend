@@ -52,17 +52,27 @@ body {
   margin: 0;
 }
 
-.item-text2 {
+.item-subtitle {
   margin: 0;
   font-family: opensans;
   margin-top: 5px
 }
 
 .notes {
+  margin: 0;
+  font-family: opensans;
+}
+
+ul {
+  padding-top: none;
   margin-top: 0;
   margin-bottom: 0;
-  margin-left: 0.3cm;
-  font-family: opensans;
+}
+
+li {
+  margin-bottom: 0;
+  padding-top: 0;
+  margin: none;
 }
 
 .skill {
