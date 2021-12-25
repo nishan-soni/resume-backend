@@ -22,7 +22,15 @@ const exportController = {
 
         sections.forEach((section) => {
             section.array.sort((a,b) => {
-                return new Date(b.start) - new Date(a.start)
+                if (b.start === null) {
+                    return new Date(b.end) - new Date(a.start)
+                }
+                if (a.start === null) {
+                    return new Date(b.end) - new Date(a.end)
+                }
+                else {
+                    return new Date(b.start) - new Date(a.start)
+                }
             })
             section.array.forEach((element) => {
                 // IF ELEMENT.START IS NOT NUTLL THEN newStart = new Date(element.start)
