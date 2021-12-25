@@ -72,7 +72,11 @@ ul {
 li {
   margin-bottom: 0;
   padding-top: 0;
-  margin: none;
+  margin: 0;
+}
+
+p {
+  margin: 0;
 }
 
 .skill {
