@@ -19,7 +19,11 @@ const exportController = {
         const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
         const sections = [education, employment, projects]
+
         sections.forEach((section) => {
+            section.array.sort((a,b) => {
+                return new Date(b.start) - new Date(a.start)
+            })
             section.array.forEach((element) => {
                 // IF ELEMENT.START IS NOT NUTLL THEN newStart = new Date(element.start)
                 if (element.start !== null) {
