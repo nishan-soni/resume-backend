@@ -8,7 +8,7 @@ const exportController = {
 
         let {template} = req.params;
         let {info, education, skills, employment, projects, color} = req.body;
-        let template_html = fs.readFileSync(`resume_templates/${template}.html`, "utf8");
+        let template_html = fs.readFileSync(`${__dirname}/../resume_templates/${template}.html`, "utf8");
 
         let options = {
             format: "Letter",
