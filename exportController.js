@@ -5,11 +5,53 @@ const fs = require("fs")
 const exportController = {
     
     exportResume(req,res) {
+
         let {template} = req.params;
-        let {info, education, skills, employment, projects, certificates, color} = req.body;
+        let {info, education, skills, employment, projects, color} = req.body;
         let template_html = fs.readFileSync(`resume_templates/${template}.html`, "utf8");
 
+        let options = {
+            format: "Letter",
+            orientation: "portrait",
+            
+        };
+
         const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+        const sections = [education, employment, projects]
+        sections.forEach((section) => {
+            section.array.forEach((element) => {
+                const newStart = new Date(element.start)
+                section.start = months[newStart.getMonth].toUpperCase() + " " + newStart.getFullYear().toString()
+                const newEnd = new Date(element.end)
+                section.end = months[newEnd.getMonth].toUpperCase() + " " + newEnd.getFullYear().toString()
+                if (element.currentChecked === true) {
+                    section.start = "CURRENT"
+                }
+
+                if(section.start !== null) {
+                    section.start += " - "
+                }
+                
+            })
+        })
+
+        let data = {
+            info: info,
+            employment : employment,
+            education : education,
+            skills : skills,
+            projects : projects,
+            color : color
+        }
+        let compiled_template = handlebars.compile(template_html)(data)
+        let resume = html_pdf.create(compiled_template, options)
+        resume.toStream((err, stream) => {
+            res.attachment('resume.pdf')
+            stream.pipe(res)
+        })
+
+        /*const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
         // EDIT THIS SOON
         if (education.array.length > 0) {
             const {array} = education
@@ -153,6 +195,7 @@ const exportController = {
             res.attachment('resume.pdf')
             stream.pipe(res)
         })
+        */
     },
 }
 
