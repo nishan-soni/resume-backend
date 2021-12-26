@@ -49,6 +49,31 @@ const exportController = {
             })
         })
 
+        if (template === "professional") {
+            const {array} = skills
+            let skillsArray = array
+            let skillString = ""
+        
+            if(skillsArray.length > 0) {
+                
+                let array = [...skillsArray]
+                for(let i = 0; i <array.length; i++) {
+        
+                    if(i === array.length-1) {
+                    skillString = skillString + array[i]
+                    }
+                    else {
+                    skillString = skillString + array[i] + ", "
+                    }
+                }
+            }
+        
+            skills = {
+                ...skills,
+                skillString : skillString
+            }
+        }
+
         let data = {
             info: info,
             employment : employment,
