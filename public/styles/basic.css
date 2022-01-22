@@ -83,6 +83,10 @@ strong {
   font-family: openSansBold;
 }
 
+em {
+  font-family: openSansItalic;
+}
+
 .skill {
   width: fit-content;
   height: fit-content;
