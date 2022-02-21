@@ -1,6 +1,7 @@
 const html_pdf = require("html-pdf")
 const handlebars = require('handlebars')
 const fs = require("fs")
+const htmlDocx = require('html-docx-js');
 
 const exportController = {
     
@@ -84,11 +85,14 @@ const exportController = {
         }
         
         let compiled_template = handlebars.compile(template_html)(data)
-        let resume = html_pdf.create(compiled_template, options)
-        resume.toStream((err, stream) => {
-            res.attachment('resume.pdf')
+        let resume_docx = htmlDocx.asBlob(compiled_template)
+        res.send(resume_docx)
+        //let resumeFile = new File(resume_docx, 'resume.docx')
+        //let resume = html_pdf.create(compiled_template, options)
+        /*resume.toStream((err, stream) => {
+            res.attachment('resume.docx')
             stream.pipe(res)
-        })
+        })*/
 
         /*const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
         // EDIT THIS SOON
