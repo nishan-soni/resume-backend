@@ -83,7 +83,7 @@ const exportController = {
         await page.setContent(compiled_template, {
             waitUntil: 'networkidle0'
         });
-        const buffer = await page.pdf({ path: 'hn.pdf', format: 'a4', printBackground: true });
+        const buffer = await page.pdf({format: 'a4', printBackground: true });
         await browser.close();
         res.end(buffer)
     },
