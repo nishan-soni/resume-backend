@@ -78,7 +78,12 @@ const exportController = {
         }
         
         let compiled_template = handlebars.compile(template_html)(data)
-        const browser = await puppeteer.launch();
+        const browser = await puppeteer.launch({
+            args: [
+              '--no-sandbox',
+              '--disable-setuid-sandbox',
+            ],
+          });
         const page = await browser.newPage();
         await page.setContent(compiled_template, {
             waitUntil: 'networkidle0'
