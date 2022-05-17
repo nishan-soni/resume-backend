@@ -79,6 +79,7 @@ const exportController = {
         
         let compiled_template = handlebars.compile(template_html)(data)
         const browser = await puppeteer.launch({
+            headless: true,
             args: [
               '--no-sandbox',
               '--disable-setuid-sandbox',
