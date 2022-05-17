@@ -87,7 +87,7 @@ const exportController = {
           });
         const page = await browser.newPage();
         await page.setContent(compiled_template, {
-            waitUntil: 'networkidle1'
+            waitUntil: 'networkidle2'
         });
         const buffer = await page.pdf({format: 'A4', printBackground: true,
         margin: {
