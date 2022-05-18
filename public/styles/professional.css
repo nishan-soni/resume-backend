@@ -18,8 +18,11 @@
   src: url("https://resume-e.herokuapp.com/fonts/SourceSerifPro-Bold.ttf");
 }
 
+@page {
+  margin: 0.5in;
+}
+
 body {
-  margin: 0.4cm 1.2cm 0.4cm 1.2cm;
   color: black;
   font-family: seriflight
 }
@@ -29,7 +32,7 @@ body {
   margin: 0;
   text-align: center;
   color: black;
-  font-size: 40px;
+  font-size: 35px;
 }
 
 #email {
@@ -44,28 +47,31 @@ body {
 
 .title {
   margin-bottom: 5px;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .item-title {
   margin-bottom: 0;
-  margin-top: 5px;
+  font-size: 16px;
 }
 
 .item-date {
-  margin: 0;
+  font-size: 14px;
 }
 
 .item-text2 {
   font-family: seriflight_italic;
   margin: 0;
   margin-top: 5px;
-  font-size: 0.9em;
+  font-size: 14px;
+  margin-bottom: 10px;
 }
 
 .notes {
+  font-family: seriflight;
   padding-top: none;
   margin: 0;
+  font-size: 14px;
 }
 
 ul {
@@ -87,7 +93,13 @@ p {
 .skill {
   width: fit-content;
   height: fit-content;
+  font-family: seriflight;
+  font-size: 14px;
   
+}
+
+.item {
+  margin-top: 10px;
 }
 
 strong {
@@ -97,4 +109,3 @@ strong {
 em {
   font-family: seriflight_italic;
 }
-

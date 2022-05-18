@@ -1,107 +1,9 @@
 <html>
   <head>
-    <style>
-      @font-face {
-        font-family: seriflight;
-        src: url("https://resume-e.herokuapp.com/fonts/SourceSerifPro-Light.ttf");
-      }
-
-      @font-face {
-        font-family: seriflight_italic;
-        src: url("https://resume-e.herokuapp.com/fonts/SourceSerifPro-LightItalic.ttf");
-      }
-
-      @font-face {
-        font-family: source_serif;
-        src: url("https://resume-e.herokuapp.com/fonts/SourceSerifPro-Regular.ttf");
-      }
-
-      @font-face {
-        font-family: source_serif_bold;
-        src: url("https://resume-e.herokuapp.com/fonts/SourceSerifPro-Bold.ttf");
-      }
-
-      body {
-        margin: 0.4cm 1.2cm 0.4cm 1.2cm;
-        color: black;
-        font-family: seriflight
-      }
-
-      #name {
-        font-family: source_serif;
-        margin: 0;
-        text-align: center;
-        color: black;
-        font-size: 40px;
-      }
-
-      #email {
-        margin: 0;
-        text-align: center;
-      }
-
-      #phone {
-        margin: 0;
-        text-align: center;
-      }
-
-      .title {
-        margin-bottom: 5px;
-        margin-top: 5px;
-      }
-
-      .item-title {
-        margin-bottom: 0;
-        margin-top: 5px;
-      }
-
-      .item-date {
-        margin: 0;
-      }
-
-      .item-text2 {
-        font-family: seriflight_italic;
-        margin: 0;
-        margin-top: 5px;
-        font-size: 0.9em;
-      }
-
-      .notes {
-        font-family: seriflight;
-        padding-top: none;
-        margin: 0;
-      }
-
-      ul {
-        padding-top: none;
-        margin-top: 0;
-        margin-bottom: 0;
-      }
-
-      li {
-        margin-bottom: 0;
-        padding-top: 0;
-        margin: 0;
-      }
-
-      p {
-        margin: 0;
-      }
-
-      .skill {
-        width: fit-content;
-        height: fit-content;
-        
-      }
-
-      strong {
-        font-family: source_serif_bold;
-      }
-
-      em {
-        font-family: seriflight_italic;
-      }
-    </style>
+    <link
+      rel="stylesheet"
+      href="https://resume-e.herokuapp.com/styles/professional.css"
+    />
 
   </head>
   <body>
@@ -114,53 +16,61 @@
     <div id="container">
 
       <div id = work-container>
-        <h2 class = 'title' id = 'work-experience'>{{employment.title}}</h2>
+        <h3 class = 'title' id = 'work-experience'>{{employment.title}}</h3>
         <hr size="0.2mm" color="{{color}}">
-        <div>
+        <div class="item">
           {{#each employment.array}}
-          <h3 style = 'margin: 0;' ><span class="item-title">{{this.title}} </span><span style="float: right">{{this.start}}{{this.end}}</span></h3>
-          <h3 class = 'item-text2' style="margin: 0">{{this.subtitle}}</h3>
-          <div>
-            <h3 class="notes">{{{this.notes}}}</h3>
+          <div class="item">
+            <h4 style = 'margin: 0;' ><span class="item-title">{{this.title}} </span><span class="item-date" style="float: right">{{this.start}}{{this.end}}</span></h4>
+            <h4 class = 'item-text2' style="margin: 0">{{this.subtitle}}</h4>
+            <div>
+              <div class="notes">{{{this.notes}}}</div>
+            </div>
           </div>
           {{/each}}
         </div>
       </div>
 
       <div id = education-container>
-        <h2 class="title" id = 'education'>{{education.title}}</h2>
+        <h3 class="title" id = 'education'>{{education.title}}</h3>
         <hr size="0.2mm" color="{{color}}">
         <div>
             {{#each education.array}}
-            <h3 style = 'margin: 0;' ><span class="item-title">{{this.title}} </span><span style="float: right">{{this.start}}{{this.end}}</span></h3>
-            <h3 class = 'item-text2' style="margin: 0">{{this.subtitle}}</h3>
-            <div>
-              <h3 class="notes">{{{this.notes}}}</h3>
+            <div class="item">
+              <h4 style = 'margin: 0;' ><span class="item-title">{{this.title}} </span><span class="item-date" style="float: right">{{this.start}}{{this.end}}</span></h4>
+              <h4 class = 'item-text2' style="margin: 0">{{this.subtitle}}</h4>
+              <div>
+                <div class="notes">{{{this.notes}}}</div>
+              </div>
             </div>
             {{/each}}
-          </div>
+        </div>
       </div>
 
       <div id = 'skills-container'>
-        <h2 class ="title" id = 'skills'>{{skills.title}}</h2>
+        <h3 class ="title" id = 'skills'>{{skills.title}}</h3>
         <hr size="0.2mm" color="{{color}}">
         <div>
-          <span class="skill"><h3 style="margin:0">{{skills.skillString}}</h3></span>
+          {{#each skills.array}}
+            <div class="skill"><ul><li>{{this}}</li></ul></div>
+          {{/each}}
         </div>
       </div>
 
       <div id = projects-container>
-        <h2 class="title" id = 'projects'>{{projects.title}}</h2>
+        <h3 class="title" id = 'projects'>{{projects.title}}</h3>
         <hr size="0.2mm" color="{{color}}">
-        <div>
+        <div class="item">
             {{#each projects.array}}
-            <h3 style = 'margin: 0;' ><span class="item-title">{{this.title}} </span><span style="float: right">{{this.start}}{{this.end}}</span></h3>
-            <h3 class = 'item-text2' style="margin: 0">{{this.subtitle}}</h3>
-            <div>
-              <h3 class="notes">{{{this.notes}}}</h3>
+            <div class="item">
+              <h4 style = 'margin: 0;' ><span class="item-title">{{this.title}} </span><span class="item-date" style="float: right">{{this.start}}{{this.end}}</span></h4>
+              <h4 class = 'item-text2' style="margin: 0">{{this.subtitle}}</h4>
+              <div>
+                <div class="notes">{{{this.notes}}}</div>
+              </div>
             </div>
             {{/each}}
-          </div>
+        </div>
       </div>
     </div>
   </body>

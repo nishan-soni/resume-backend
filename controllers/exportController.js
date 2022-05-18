@@ -90,13 +90,9 @@ const exportController = {
         await page.setContent(compiled_template, {
             waitUntil: 'networkidle2'
         });
-        const buffer = await page.pdf({format: 'A4', printBackground: true,
-        margin: {
-            top: "10px",
-            right: "20px",
-            bottom: "10px",
-            left: "20px"
-        }, });
+        const buffer = await page.pdf({format: 'letter', printBackground: true,
+            preferCSSPageSize:true,
+        });
         await browser.close();
         res.end(buffer)
     },
