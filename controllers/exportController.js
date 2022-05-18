@@ -83,6 +83,7 @@ const exportController = {
             args: [
               '--no-sandbox',
               '--disable-setuid-sandbox',
+              '--font-render-hinting=none'
             ],
           });
         const page = await browser.newPage();
